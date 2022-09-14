@@ -18,7 +18,7 @@
         <p>Bill</p>
         <div class="input-wrapper">
           <img src="./images/icon-dollar.svg" alt="">
-          <input id="bill" type="text" placeholder="0">
+          <input id="bill" type="text" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');">
         </div>
       </div>
       <div class="select-tip">
@@ -36,7 +36,7 @@
         <p>Number of people</p>
         <div class="input-wrapper">
           <img src="./images/icon-person.svg" alt="">
-          <input type="text" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');">
+          <input id="ppl" type="text" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');">
         </div>
       </div>
     </div>
@@ -57,11 +57,11 @@
             <p>/ person</p>
           </div>
           <div>
-            <h1>$0.00</h1>
+            <h1 id="ppl-amount">$0.00</h1>
           </div>
         </div>
       </div>
-      <button class="reset-btn">RESET</button>
+      <button class="reset-btn" onclick="resetBtn()">RESET</button>
     </div>
   </div>
   <script src="./index.js"></script>
