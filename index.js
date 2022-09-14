@@ -17,7 +17,7 @@ const getTip = (value) =>{
  document.getElementById('ppl-amount').innerHTML = total;
 }
 
-const resetBtn = () =>{
+const reset = () =>{
  document.getElementById('bill').value = 0;
  document.getElementById('ppl').value = 0;
  document.getElementById('tip-amount').innerHTML = 0;
